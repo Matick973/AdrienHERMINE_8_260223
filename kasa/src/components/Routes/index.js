@@ -10,6 +10,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 import Home from '../../pages/Home';
+import ProductPage from '../../pages/Product-page';
 import About from '../../pages/About';
 import ErrorPage from '../../pages/Error-page';
 
@@ -19,9 +20,11 @@ function Navigation() {
             <Router>
                   <Header/>
                   <Routes>
-                        <Route path="/" element={<Home/>} />
+                        <Route path="/" element={<Navigate replace to="/home" />} />
+                        <Route path="/home" element={<Home/>} />
+                        <Route path="/appartement/:id/" element={<ProductPage/>} />
                         <Route path="/about" element={<About/>} />,
-                        <Route path="*" element={<Navigate replace to= {<ErrorPage/>} />} />
+                        <Route path="*" element={ <ErrorPage/> } />
                   </Routes>
                   <Footer/>
             </Router>

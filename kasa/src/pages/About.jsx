@@ -1,12 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
+import AboutsList from '../components/About/AboutsList';
+import Banner from '../components/Header/Banner';
 
 function About() {
   return (
     <div className="App">
-
-      <Header/>
-
+    
+      <Banner/>
+      <AboutsList/>
+    
     </div>
   );
 }

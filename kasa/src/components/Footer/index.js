@@ -1,27 +1,36 @@
-import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import logo from '../../images/KasaLogo.png'
+import '../../style/Footer.scss'
+import '../Header/index.js'
  
 function Footer() {
+
+    const [activePage, setActivePage] = useState(1)
+
+    const togglePage = (i) =>{
+        setActivePage(i)
+        console.log(i)
+    }
     
     return (
-        <nav>
-            
+        <div className='footer-container'>
+
             <div className="logo-container">
 
-                <NavLink to='/Home' className="nav-link">
-                    <div className="logo" >
-                        <img src={logo} alt="Logo Groupomania"/>
+                <NavLink to='/home' className="nav-link" onClick={() => togglePage(1)}>
+                    <div className="kasa-logo" >
+                        <img src={logo} alt="Logo Kasa"/>
                     </div>
                 </NavLink>
 
             </div>
 
-            <div>
-                <h3>© 2020 Kasa. All rights reserved</h3>
+            <div className='reserved'>
+                <p>© 2020 Kasa. All rights reserved</p>
             </div>
 
-        </nav>
+        </div>
     )
 }
 

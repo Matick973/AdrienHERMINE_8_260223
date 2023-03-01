@@ -1,0 +1,55 @@
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1240px;
+    height : 415px;
+    border-radius: 25px;
+}
+
+.carousel-picture{
+    max-width: 1240px;
+    height : 415px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.left-arrow{
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    max-height: 80px;
+    width: 50px;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        scale: 1.1;
+        transition: ease-in-out 0.3s;
+    }
+}
+
+.right-arrow{
+    position: absolute;
+    top: 40%;
+    right: 30px;
+    max-height: 80px;
+    width: 50px;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        scale: 1.1;
+        transition: ease-in-out 0.3s;
+    }
+}
+
+.slide.active{
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.slide{
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+

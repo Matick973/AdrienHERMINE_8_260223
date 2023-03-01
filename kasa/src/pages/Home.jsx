@@ -1,12 +1,15 @@
 import React from 'react';
-import Banner from '../components/Banner'
+import AppartementsList from '../components/Appartement/Appartements-list'
+import Banner from '../components/Header/Banner'
+import '../style/Home.scss';
 
 function Home() {
+
   return (
     <div className="App">
-        HELLO
 
       <Banner/>
+      <AppartementsList/>
 
     </div>
   );

@@ -1,14 +1,11 @@
 import React from "react";
-import { NavLink, useRouteError } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "../style/Error-page.scss"
 
 const ErrorPage = () => {
 
-    const error = useRouteError();
-
-    console.error(error);
-
   return (
-    <div id="error-page">
+    <div className="error-page-container">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
       
