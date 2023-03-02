@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { appartementsList } from '../../datas/appartementsData'
-import AppartementCard from "./Appartement-card"
+import AppartementCard from "../Product/Appartement-card"
 import '../../style/Home.scss';
 
 const AppartementsList = () => {
