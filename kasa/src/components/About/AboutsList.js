@@ -13,11 +13,12 @@ const AboutsList = () => {
             <div>
 			
                 <ul className='abouts-list'>
-                    {aboutList.map(({  id, title, description }) => (
+                    {aboutList.map(({  id, title, description, equipments }) => (
                         <About
                             key={id}
                             title={title}
                             description={description}
+                            equipments={equipments}
                         />
                     ))}
                 </ul>

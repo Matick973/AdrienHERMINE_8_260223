@@ -7,6 +7,7 @@ import LeftArrow from '../../images/LeftArrow.png'
 import RightArrow from '../../images/RightArrow.png'
 import '../../style/Slideshow.scss'
 import '../../style/Product.scss'
+import AboutItem from "../About/AboutItem";
 
 const ProductForm = () => {
 
@@ -54,9 +55,42 @@ const ProductForm = () => {
                         })}
                     </section>
 
-                    <h1>{thisProduct.title}</h1>
-                    <p>{thisProduct.location}</p>
-                    <p>{thisProduct.description}</p>
+                    <section className="infos-product">
+
+                    <div className="first-line">   
+                        <div className="title">
+                            <p>{thisProduct.title}</p>
+                        </div>
+
+                        <div className="host-profil">
+                            <p>{thisProduct.host.name}</p>
+                            <img src={thisProduct.host.picture} className='host-picture' alt="pics du propriétaire"/>
+                        </div>
+                    </div>   
+
+                    <div className="second-line">
+                        <p>{thisProduct.location}</p>
+                    </div>
+
+                    <div className="third-line">
+                        <div className="tags">{thisProduct.tags.map((tag , index) => { return ( <p key={index}>{tag}</p> )})}</div>
+                        <p>{thisProduct.rating}</p>
+                    </div>
+
+                    <div className="fourth-line">
+                        <div className="collapse-product"><AboutItem className='about-card--product' title= 'Description' description={thisProduct.description} /></div>
+                        <div className="collapse-product"><AboutItem className='about-card--product' title= 'Equipements' description={thisProduct.equipments.map((equipment, i) => (
+                            <ul key={i}>
+                                <p>{equipment}</p>
+                            </ul>
+                        ))} /></div>
+                    </div>
+
+
+                    </section>
+
+                    
+                    
                 </div>
  
         

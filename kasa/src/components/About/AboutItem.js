@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import '../../style/About.scss';
 import ArrowImg from '../../images/Vector.png'
 
-const AboutItem = ({ id, title, description }) => {
+const AboutItem = ({ id, title, description, equipments }) => {
 
     const [ isOpen, setIsOpen ] = useState(false)
 
@@ -14,8 +14,7 @@ const AboutItem = ({ id, title, description }) => {
         return (
 
             <div className='about-card' onClick={toggleOpen}>
-                <li className='about-item'>
-                    
+                <div className='about-item'>  
 			        <div className="about-card-title">
                         <p >{title}</p>
                         <div className= {isOpen ? "arrow--active" : "arrow--inactive"}>
@@ -26,7 +25,7 @@ const AboutItem = ({ id, title, description }) => {
                     <div className= {isOpen ? "about-dropdown-text--active" : "about-dropdown-text--inactive"}>
                         <p >{description}</p>
                     </div>
-		        </li>
+		        </div>
 		    </div>
 
         )
