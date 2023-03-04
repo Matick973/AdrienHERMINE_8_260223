@@ -20,32 +20,30 @@ const Banner = () => {
 
         })
         
-
         //console.log(window.location.pathname)
         //console.log(isHome)
 
         return (
                 <>
                 {isHome ? ( 
-           
-                        <div className="banner-container">
 
-                                <div className="slogan">
-                                <p>Chez vous, partout et ailleurs</p>
+                        <div className="banner-container--home">
+
+                               <div className="slogan">
+                                        <p>Chez vous, partout et ailleurs</p>
                                 </div>
 
-                                <div className="banner-img-layout">
-                                <img src={homeBannerImg} alt="Bannière paysage bord de mer"/>
-                                </div>
                         </div>
-
+                        
                 ) :  
                 
-                (       <div className="banner-container">   
-                                <img src={aboutBannerImg} alt="Bannière paysage montagne"/>
+                (       <div className="banner-container--about">   
+
                         </div>) }
                 </>
         )
 }
 
 export default Banner
+
+//style={{ backgroundBlendMode: 'darken',backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"223px", backgroundPosition:"center" }}

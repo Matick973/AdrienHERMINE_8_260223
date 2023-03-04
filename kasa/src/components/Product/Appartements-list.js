@@ -9,10 +9,8 @@ const AppartementsList = () => {
         })
 
         return (
-
-            <div>
-			
-                <ul className='appartements-list'>
+			<>
+                <div className='appartements-list'>
                     {appartementsList.map(({  id, title, cover, pictures, description, host, rating, location, equipements, tags }) => (
                         <AppartementCard
                             key={id}
@@ -28,10 +26,8 @@ const AppartementsList = () => {
                             tags={tags}
                         />
                     ))}
-                </ul>
-
-		</div>
-
+                </div>
+            </>
         )
 }
 

@@ -1,35 +1,75 @@
-.banner-container{
+.banner-container--home{
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
-    max-width: 1240px;
-    height: 220px;
     margin-top: 50px;
     margin-bottom: 30px;
-   
-    img{
-        opacity: 0.7;
-        height: 220px;
-        width: 1240px;
-        object-fit: cover;
-        border-radius: 25px;
-    }   
+    border-radius: 25px;
+    height: 223px;
+
+    background: url('../images/homeBanner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.slogan{
-    position: absolute;
-    z-index: 2;
+.banner-container--about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    height: 223px;
+
+    background: url('../images/aboutBanner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: lighten;
+}
+
+.slogan p{
+    
+    position: relative;
+    z-index: 4;
     font-weight: 500;
     font-size: 48px;
-    line-height: 142.6%;
-    color: #FFFFFF;
+    color: white;
 }
 
-.banner-img-layout{
-    border-radius: 25px;
-    max-width: 1240px;
-    height: 220px;
-    background: #000000;
-    opacity: 1;
-  }
+
+  /*----------------------------------------*/
+
+@media screen and (max-width: 992px){
+    .banner-container{
+        height: 223px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+ 
+    .banner-container{
+        height: 111px;
+        border-radius: 10px;
+    }
+
+    .slogan p{
+        font-size: 24px;
+        padding: 2%;
+    }
+
+    .banner-container--home{
+        border-radius: 10px;
+        height: 111px;
+        margin: 0% 3% 0% 3%;
+    }
+    
+    .banner-container--about{
+        border-radius: 10px;
+        height: 223px;
+        margin: 0% 3% 3% 3%;
+    }
+
+}

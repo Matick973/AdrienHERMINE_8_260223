@@ -23,7 +23,7 @@ function Navigation() {
                         <Route path="/" element={<Navigate replace to="/home" />} />
                         <Route path="/home" element={<Home/>} />
                         <Route path="/appartement/:id/" element={<ProductPage/>} />
-                        <Route path="/about" element={<About/>} />,
+                        <Route path="/about" element={<About/>} />
                         <Route path="*" element={ <ErrorPage/> } />
                   </Routes>
                   <Footer/>

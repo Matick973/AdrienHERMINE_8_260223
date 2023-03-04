@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1240px;
     height: 68px;
-    padding: 3% 3% 0% 3%;
+    padding: 3% 0% 0% 0%;
     margin: auto;
 }
 
@@ -12,20 +11,57 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    width: 309px;
+    width: 26%;
     
     p{
+        white-space: nowrap;
         font-weight: 500;
         font-size: 24px;
-        line-height: 142.6%;
         text-align: right;
         color: #FF6060;
-
-        
     }
 
     .active-page{
         color: #FF6060;
         text-decoration-line: underline; 
+    }
+}
+
+/*----------------------------------------*/
+
+@media screen and (max-width: 992px){
+
+    .nav-menu{
+        
+        width: 30%;
+        
+        p{
+            margin-left: 5%;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .header-container{
+        padding: 3% 5% 0% 5%
+    }
+
+    .logo{
+        img{
+            width: 50%;  
+        }
+      
+    }
+    
+    .nav-menu{
+        width: 37%;
+
+        p{
+            font-size: 12px;
+        }
+
     }
 }

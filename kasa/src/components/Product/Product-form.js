@@ -1,17 +1,22 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
-import '../../style/Home.scss';
-import Slideshow from "./Slideshow";
 import { appartementsList } from '../../datas/appartementsData'
-import '../../style/Slideshow.scss'
-import '../../style/Product.scss'
+import Slideshow from "./Slideshow";
 import AboutItem from "../About/AboutItem";
 import StarScale from "../Product/StarScale";
+
+import '../../style/Home.scss';
+import '../../style/Slideshow.scss'
+import '../../style/Product.scss'
+import ErrorPage from "../../pages/Error-page";
 
 const ProductForm = () => {
 
     const { id } = useParams()                                                       //Recupere l'Id dans l'URL 
+
     const thisProduct = appartementsList.find(appart => appart.id === id)           //Correspondance Id de l'URL avec Id dans Data
+        if ( thisProduct === undefined ) return <ErrorPage/>                        //Si Aucune correspendance alors Page 404
+     
 
         return (
             <>

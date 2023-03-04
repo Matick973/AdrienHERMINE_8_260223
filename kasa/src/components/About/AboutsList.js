@@ -9,10 +9,8 @@ const AboutsList = () => {
         })
 
         return (
-
-            <div>
 			
-                <ul className='abouts-list'>
+                <>
                     {aboutList.map(({  id, title, description, equipments }) => (
                         <About
                             key={id}
@@ -21,9 +19,7 @@ const AboutsList = () => {
                             equipments={equipments}
                         />
                     ))}
-                </ul>
-
-		</div>
+                </>
 
         )
 }
