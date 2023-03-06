@@ -19,10 +19,15 @@
         font-size: 24px;
         text-align: right;
         color: #FF6060;
+            &:hover{
+                transform: scale(1.15);
+                transition: ease 0.3s;
+            }
     }
 
     .active-page{
         color: #FF6060;
+        transform: scale(1.15);
         text-decoration-line: underline; 
     }
 }

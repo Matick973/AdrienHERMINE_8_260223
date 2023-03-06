@@ -29,9 +29,17 @@
     mix-blend-mode: lighten;
 }
 
-.slogan p{
-    
+.banner-container-layout{
     position: relative;
+    height: 223px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 25px;
+}
+
+.slogan {
+    position: absolute;
     z-index: 4;
     font-weight: 500;
     font-size: 48px;
@@ -51,6 +59,12 @@
 @media screen and (max-width: 768px){
  
     .banner-container{
+        height: 111px;
+        border-radius: 10px;
+    }
+
+    .banner-container-layout{
+        position: relative;
         height: 111px;
         border-radius: 10px;
     }

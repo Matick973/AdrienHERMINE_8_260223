@@ -59,13 +59,10 @@
     transition: all .5s ease-in-out;
     background: #F7F7F7;
     border-radius: 5px;
-    
-    p{
-        padding: 3% 2% 1% 2%;
-        margin-top: 0px;
-        margin-bottom: 4%;
-    }
+}
 
+.description-container{
+    padding: 2% 3% 4% 2%;
 }
 
 .about-dropdown-text--inactive{
@@ -83,7 +80,7 @@
 @media screen and (max-width: 768px){
 
     .about-card-title{
-        margin: 3%;
+        margin: 0% 3% 0% 3%;
         height: 30px;
 
         p{
@@ -93,6 +90,7 @@
 
     .about-dropdown-text--active{
         font-size: 12px;
+        margin: 0% 3% 0% 3%;
     }
 
 }

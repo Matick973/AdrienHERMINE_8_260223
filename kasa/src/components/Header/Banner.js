@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react"
-import homeBannerImg from "../../images/homeBanner.png"
-import aboutBannerImg from "../../images/aboutBanner.png"
 import '../../style/Banner.scss'
 
 const Banner = () => {
@@ -28,11 +26,12 @@ const Banner = () => {
                 {isHome ? ( 
 
                         <div className="banner-container--home">
+                                <div className="banner-container-layout"></div>
 
-                               <div className="slogan">
+                                <div className="slogan">
                                         <p>Chez vous, partout et ailleurs</p>
                                 </div>
-
+                                
                         </div>
                         
                 ) :  

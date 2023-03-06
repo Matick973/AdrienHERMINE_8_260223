@@ -16,14 +16,14 @@ const AboutItem = ({ id, title, description, equipments }) => {
             <div className='about-card' onClick={toggleOpen}>
                 <div className='about-item'>  
 			        <div className="about-card-title">
-                        <p >{title}</p>
+                        <p>{title}</p>
                         <div className= {isOpen ? "arrow--active" : "arrow--inactive"}>
                             <img src={ArrowImg} alt={`${title} cover`} />  
                         </div>    
                     </div>
                     
                     <div className= {isOpen ? "about-dropdown-text--active" : "about-dropdown-text--inactive"}>
-                        <p >{description}</p>
+                        <div className="description-container">{description}</div>
                     </div>
 		        </div>
 		    </div>

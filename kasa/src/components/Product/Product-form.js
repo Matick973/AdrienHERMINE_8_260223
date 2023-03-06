@@ -19,50 +19,62 @@ const ProductForm = () => {
      
 
         return (
-            <>
+            <>  
                 <div className="product-form">
 
+                    <div className="slideshow-container">
                     <Slideshow pictures={thisProduct.pictures}/>
+                    </div>
 
                     <section className="infos-product">
 
-                    <div className="first-line">   
-                        <div className="title">
-                            <p>{thisProduct.title}</p>
+                        <div className="first-line">   
+                            <div className="title">
+                                <p>{thisProduct.title}</p>
+                            </div>
+
+                            <div className="host-profil desktop">
+                                <p>{thisProduct.host.name}</p>
+                                <img src={thisProduct.host.picture} className='host-picture' alt="pics du propriétaire"/>
+                            </div>
+                        </div>   
+
+                        <div className="second-line">
+                            <p>{thisProduct.location}</p>
                         </div>
 
-                        <div className="host-profil">
-                            <p>{thisProduct.host.name}</p>
-                            <img src={thisProduct.host.picture} className='host-picture' alt="pics du propriétaire"/>
+                        <div className="third-line">
+                            <div className="tags">{thisProduct.tags.map((tag , index) => { return ( <p key={index}>{tag}</p> )})}</div>
+                            <div className='stars-container'>
+                                <StarScale hostRating={thisProduct.rating}/>
+                            </div>
                         </div>
-                    </div>   
 
-                    <div className="second-line">
-                        <p>{thisProduct.location}</p>
-                    </div>
+                        <div className="display-mobile">
+                            <div className='stars-container--desktop'>
+                            <StarScale hostRating={thisProduct.rating}/>
+                            </div>
+                            <div className="host-profil--desktop">
+                                <p>{thisProduct.host.name}</p>
+                                <img src={thisProduct.host.picture} className='host-picture' alt="pics du propriétaire"/>
+                            </div>
+                        </div>
 
-                    <div className="third-line">
-                        <div className="tags">{thisProduct.tags.map((tag , index) => { return ( <p key={index}>{tag}</p> )})}</div>
-                        <StarScale hostRating={thisProduct.rating}/>
-                    </div>
+                        <div className="fourth-line">
+                            <div className="collapse-product"><AboutItem className='about-card--product' title= 'Description' description={thisProduct.description} /></div>
+                            <div className="collapse-product"><AboutItem className='about-card--product' title= 'Equipements' description={thisProduct.equipments.map((equipment, i) => (
+                                <ul key={i}>
+                                    <li>{equipment}</li>
+                                </ul>
+                            ))} /></div>
+                        </div>
 
-                    <div className="fourth-line">
-                        <div className="collapse-product"><AboutItem className='about-card--product' title= 'Description' description={thisProduct.description} /></div>
-                        <div className="collapse-product"><AboutItem className='about-card--product' title= 'Equipements' description={thisProduct.equipments.map((equipment, i) => (
-                            <ul key={i}>
-                                <p>{equipment}</p>
-                            </ul>
-                        ))} /></div>
-                    </div>
-
+                        
 
                     </section>
 
-                    
-                    
                 </div>
  
-        
             </>
         )
             

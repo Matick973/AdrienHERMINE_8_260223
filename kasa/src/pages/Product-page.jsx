@@ -4,7 +4,9 @@ import ProductForm from '../components/Product/Product-form';
 function ProductPage() {
 
   return(
+
       <ProductForm/>
+      
   );
 }
 

@@ -48,7 +48,7 @@ const AppartementCard = ({ id, title, cover, description }) => {
 export default AppartementCard
 
 //https://codesandbox.io/s/react-router-product-detail-pages-dynamic-links-tmcjc?file=/src/Products.js:257-302
-
+//https://www.encodedna.com/javascript/redirect-page-after-a-delay-using-javascript.htm
 /**   
  * 
  * 
